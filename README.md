@@ -1,5 +1,5 @@
 Juego de Cars hecho en Python
-.Requisito minimo
+# Requisito minimo
 Instalado
 Python
-. cars
+# Cars para Pipi
