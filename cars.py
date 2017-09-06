@@ -9,7 +9,6 @@ from pygame.locals import *
 FPS = 30
 SCREENWIDTH  = 846#282 * 3
 SCREENHEIGHT = 358#179 * 2 
-# amount by which base can maximum shift to left
 PIPEGAPSIZE  = 100 # gap between upper and lower part of pipe
 #BASEY        = SCREENHEIGHT * 0.79
 # image, sound and hitmask  dicts
@@ -21,19 +20,11 @@ BACKGROUNDS_LIST = (
     'imagenesCars/franchesco.jpg',
     'imagenesCars/hippy.jpg',
     'imagenesCars/luigi.jpg',
-    #'imagenesCars/mate.jpg',
     'imagenesCars/ramon.jpg',
-    #'imagenesCars/rayo.jpg',
-    #'imagenesCars/red.jpg',
-    #'imagenesCars/sally.jpg',
     'imagenesCars/sargento.jpg',
-    'imagenesCars/apb.jpg',
-    
+    'imagenesCars/apb.jpg',    
     'imagenesCars/Doc.jpg',
-    'imagenesCars/sheriff.jpg',
-    
-    #'imagenesCars/cruz.jpg',
-    #'imagenesCars/Jackson_Storm.jpg'
+    'imagenesCars/sheriff.jpg',    
 )
 
 def main():
@@ -83,7 +74,7 @@ def main():
                     IMAGES['background'] = pygame.image.load('imagenesCars/rayo lodo.jpg').convert()
                     SCREEN.blit(IMAGES['background'], (0,0))
                 if event.key == K_RIGHT:
-                    if posx < 846:
+                    if posx < SCREENWIDTH:
                         posx=posx + 50
                     SCREEN.blit(IMAGES['background'], (posx,posy))
                 if event.key == K_LEFT:
