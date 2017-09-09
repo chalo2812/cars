@@ -30,6 +30,7 @@ BACKGROUNDS_LIST = (
     #'imagenesCars/apb.jpg',
     
     'imagenesCars/Doc.jpg',
+    #'imagenesCars/Chick.jpg',
     'imagenesCars/sheriff.jpg',
     #'imagenesCars/cruz lodo.jpg'
     #'imagenesCars/cruz.jpg',
@@ -50,7 +51,9 @@ def main():
     while True:
         for event in pygame.event.get():
             if event.type == KEYDOWN: 
+
                 if event.key == K_SPACE:
+                    posx=0; posy=0
                     randBg = random.randint(0, len(BACKGROUNDS_LIST) - 1) 
                     IMAGES['background'] = pygame.image.load(BACKGROUNDS_LIST[randBg]).convert() 
                     SCREEN.blit(IMAGES['background'], (0,0)) 
@@ -59,35 +62,57 @@ def main():
                     IMAGES['background'] = pygame.image.load(BACKGROUNDS).convert()
                     SCREEN.blit(IMAGES['background'], (posx,posy)) 
                 if event.key == K_r:
+                    posx=0; posy=0
                     IMAGES['background'] = pygame.image.load('imagenesCars/rayo.jpg').convert()                
                     SCREEN.blit(IMAGES['background'], (0,0))
                 if event.key == K_w:
+                    posx=0; posy=0
                     IMAGES['background'] = pygame.image.load('imagenesCars/Miss_Fritter.jpg').convert()
                     SCREEN.blit(IMAGES['background'], (0,0))
                 if event.key == K_s:
+                    posx=0; posy=0
                     IMAGES['background'] = pygame.image.load('imagenesCars/sally.jpg').convert()                
                     SCREEN.blit(IMAGES['background'], (0,0))
                 if event.key == K_1:
+                    posx=0; posy=0
                     IMAGES['background'] = pygame.image.load('imagenesCars/red.jpg').convert()
                     SCREEN.blit(IMAGES['background'], (0,0))
                 if event.key == K_2:
+                    posx=0; posy=0
                     IMAGES['background'] = pygame.image.load('imagenesCars/Jackson_Storm.jpg').convert()
                     SCREEN.blit(IMAGES['background'], (0,0))
                 if event.key == K_m:
+                    posx=0; posy=0
                     IMAGES['background'] = pygame.image.load('imagenesCars/mate.jpg').convert()
                     SCREEN.blit(IMAGES['background'], (0,0))
                 if event.key == K_c:
+                    posx=0; posy=0
                     IMAGES['background'] = pygame.image.load('imagenesCars/cruz.jpg').convert()
                     SCREEN.blit(IMAGES['background'], (0,0))
                 if event.key == K_z:
+                    posx=0; posy=0
                     IMAGES['background'] = pygame.image.load('imagenesCars/rayo lodo.jpg').convert()
                     SCREEN.blit(IMAGES['background'], (0,0))
                 if event.key == K_0:
+                    posx=0; posy=0
                     IMAGES['background'] = pygame.image.load('imagenesCars/cruz lodo.jpg').convert()
                     SCREEN.blit(IMAGES['background'], (0,0))
                 if event.key == K_a:
+                    posx=0; posy=0
                     IMAGES['background'] = pygame.image.load('imagenesCars/apb.jpg').convert()
                     SCREEN.blit(IMAGES['background'], (0,0))
+                if event.key == K_8:
+                    posx=0; posy=0
+                    IMAGES['background'] = pygame.image.load('imagenesCars/Chick.jpg').convert()
+                    SCREEN.blit(IMAGES['background'], (0,0))
+                if event.key == K_k:
+                    posx=0; posy=0
+                    IMAGES['background'] = pygame.image.load('imagenesCars/mack.jpg').convert()
+                    SCREEN.blit(IMAGES['background'], (0,0))
+                if event.key == K_g:
+                    posx=0; posy=0
+                    IMAGES['background'] = pygame.image.load('imagenesCars/guido.jpg').convert()
+                    SCREEN.blit(IMAGES['background'], (0,0))         
                 if event.key == K_RIGHT:
                     if posx < 846:
                         posx=posx + 50
@@ -98,7 +123,7 @@ def main():
                     SCREEN.blit(IMAGES['background'], (posx,posy))
                 if event.key == K_DOWN:
                     if posy < 358:
-                        posy=posy + 50
+                        posy=posy + 50     
                     SCREEN.blit(IMAGES['background'], (posx,posy))
                 if event.key == K_UP:
                     if posy > 0:
