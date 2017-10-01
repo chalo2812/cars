@@ -105,6 +105,10 @@ def main():
                     posx=0; posy=0
                     IMAGES['background'] = pygame.image.load('imagenesCars/Chick.jpg').convert()
                     SCREEN.blit(IMAGES['background'], (0,0))
+				#if event.key == K_w:
+                #    posx=0; posy=0
+                #    IMAGES['background'] = pygame.image.load('imagenesCars/cruz 95.jpg').convert()
+                #    SCREEN.blit(IMAGES['background'], (0,0))
                 if event.key == K_k:
                     posx=0; posy=0
                     IMAGES['background'] = pygame.image.load('imagenesCars/mack.jpg').convert()
@@ -115,19 +119,19 @@ def main():
                     SCREEN.blit(IMAGES['background'], (0,0))         
                 if event.key == K_RIGHT:
                     if posx < 846:
-                        posx=posx + 50
+                        posx=posx + 30
                     SCREEN.blit(IMAGES['background'], (posx,posy))
                 if event.key == K_LEFT:
                     if posx > 0:
-                        posx=posx - 50
+                        posx=posx - 30
                     SCREEN.blit(IMAGES['background'], (posx,posy))
                 if event.key == K_DOWN:
                     if posy < 358:
-                        posy=posy + 50     
+                        posy=posy + 30     
                     SCREEN.blit(IMAGES['background'], (posx,posy))
                 if event.key == K_UP:
                     if posy > 0:
-                        posy=posy - 50
+                        posy=posy - 30
                     SCREEN.blit(IMAGES['background'], (posx,posy))  
                 if event.key == K_ESCAPE:
                     pygame.quit()
