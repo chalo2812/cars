@@ -81,6 +81,10 @@ def main():
                     posx=0; posy=0
                     IMAGES['background'] = pygame.image.load('imagenesCars/Jackson_Storm.jpg').convert()
                     SCREEN.blit(IMAGES['background'], (0,0))
+                if event.key == K_2:
+                    posx=0; posy=0
+                    IMAGES['background'] = pygame.image.load('imagenesCars/Jackson_Storm.jpg').convert()
+                    SCREEN.blit(IMAGES['background'], (0,0))
                 if event.key == K_m:
                     posx=0; posy=0
                     IMAGES['background'] = pygame.image.load('imagenesCars/mate.jpg').convert()
@@ -105,10 +109,10 @@ def main():
                     posx=0; posy=0
                     IMAGES['background'] = pygame.image.load('imagenesCars/Chick.jpg').convert()
                     SCREEN.blit(IMAGES['background'], (0,0))
-				#if event.key == K_w:
-                #    posx=0; posy=0
-                #    IMAGES['background'] = pygame.image.load('imagenesCars/cruz 95.jpg').convert()
-                #    SCREEN.blit(IMAGES['background'], (0,0))
+                if event.key == K_q:
+                    posx=0; posy=0;
+                    IMAGES['background'] = pygame.image.load('imagenesCars/cruz final.jpg').convert()
+                    SCREEN.blit(IMAGES['background'], (0,0))
                 if event.key == K_k:
                     posx=0; posy=0
                     IMAGES['background'] = pygame.image.load('imagenesCars/mack.jpg').convert()
