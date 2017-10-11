@@ -1,10 +1,9 @@
 from itertools import cycle
 import random
 import sys
-
 import pygame
-from pygame.locals import *
 
+from pygame.locals import *
 
 FPS = 30
 SCREENWIDTH  = 846#282 * 3
@@ -43,15 +42,13 @@ def main():
     pygame.init()
     SCREEN = pygame.display.set_mode((SCREENWIDTH, SCREENHEIGHT))
     pygame.display.set_caption('Cars')
-    pygame.mixer.music.load('estrellita.mp3')
     IMAGES['background'] = pygame.image.load(BACKGROUNDS).convert()
-    posx = 0
-    posy = 0
+    posx = 0;
+    posy = 0;
     SCREEN.blit(IMAGES['background'], (0,0)) 
     while True:
         for event in pygame.event.get():
             if event.type == KEYDOWN: 
-
                 if event.key == K_SPACE:
                     posx=0; posy=0
                     randBg = random.randint(0, len(BACKGROUNDS_LIST) - 1) 
@@ -81,10 +78,6 @@ def main():
                     posx=0; posy=0
                     IMAGES['background'] = pygame.image.load('imagenesCars/Jackson_Storm.jpg').convert()
                     SCREEN.blit(IMAGES['background'], (0,0))
-                if event.key == K_2:
-                    posx=0; posy=0
-                    IMAGES['background'] = pygame.image.load('imagenesCars/Jackson_Storm.jpg').convert()
-                    SCREEN.blit(IMAGES['background'], (0,0))
                 if event.key == K_m:
                     posx=0; posy=0
                     IMAGES['background'] = pygame.image.load('imagenesCars/mate.jpg').convert()
@@ -101,6 +94,10 @@ def main():
                     posx=0; posy=0
                     IMAGES['background'] = pygame.image.load('imagenesCars/cruz lodo.jpg').convert()
                     SCREEN.blit(IMAGES['background'], (0,0))
+                if event.key == K_5:
+                    posx=0; posy=0
+                    IMAGES['background'] = pygame.image.load('imagenesCars/cruz 95.jpg').convert()
+                    SCREEN.blit(IMAGES['background'],(0,0))
                 if event.key == K_a:
                     posx=0; posy=0
                     IMAGES['background'] = pygame.image.load('imagenesCars/apb.jpg').convert()
@@ -121,17 +118,21 @@ def main():
                     posx=0; posy=0
                     IMAGES['background'] = pygame.image.load('imagenesCars/guido.jpg').convert()
                     SCREEN.blit(IMAGES['background'], (0,0))         
+                if event.key == K_h:
+                    posx=0; posy=0
+                    IMAGES['background'] = pygame.image.load('imagenesCars/Holley_Shiftwell.png').convert()
+                    SCREEN.blit(IMAGES['background'], (0,0))         
                 if event.key == K_RIGHT:
-                    if posx < 846:
-                        posx=posx + 30
-                    SCREEN.blit(IMAGES['background'], (posx,posy))
+					if posx < 846:
+						posx = posx + 30
+					SCREEN.blit(IMAGES['background'], (posx,posy))
                 if event.key == K_LEFT:
                     if posx > 0:
-                        posx=posx - 30
+                        posx = posx - 30
                     SCREEN.blit(IMAGES['background'], (posx,posy))
                 if event.key == K_DOWN:
                     if posy < 358:
-                        posy=posy + 30     
+                        posy = posy + 30
                     SCREEN.blit(IMAGES['background'], (posx,posy))
                 if event.key == K_UP:
                     if posy > 0:
@@ -140,9 +141,9 @@ def main():
                 if event.key == K_ESCAPE:
                     pygame.quit()
                     sys.exit()
-            if event.type == QUIT:
-                pygame.quit()
-                sys.exit()
+                if event.type == QUIT:
+                    pygame.quit()
+                    sys.exit()
         pygame.display.flip()
         FPSCLOCK.tick(FPS)
 
