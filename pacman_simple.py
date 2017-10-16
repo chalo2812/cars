@@ -27,11 +27,11 @@ class MiSprite ( pygame.sprite.Sprite ):
 if __name__ == "__main__":    
     pygame.init()
     IMAGES, SOUNDS, HITMASKS = {}, {}, {}
-    BACKGROUNDS = ('fondo.png')
+    #BACKGROUNDS = ('fondo.png')
    # IMAGES['background'] = pygame.image.load(BACKGROUNDS).convert()
     #Indicamos la dimension de la pantlla de juego
     window = pygame.display.set_mode([1024,688])
-    pygame.display.set_caption("Ppacman")  
+    pygame.display.set_caption("Pacman")  
     #Inicializamos la pantalla con fondo negro
     screen = pygame.display.get_surface()
     #screen.blit(BACKGROUNDS, (0,0)) 
@@ -42,14 +42,14 @@ if __name__ == "__main__":
     background = screen.copy()
     #creamos los sprites
     sprites = pygame.sprite.RenderUpdates()
-    sprite1 = MiSprite("pacman.gif", [0,0], [0,1])
+    sprite1 = MiSprite("imagenesPacman/pacman.gif", [0,0], [0,1])
     sprites.add ( sprite1 )
-    sprite2 = MiSprite("fantasma.gif",[100,0], [0, 1] )
+    sprite2 = MiSprite("imagenesPacman/fantasma.gif",[100,0], [0, 1] )
     sprites.add ( sprite2 )
-    sprite3 = MiSprite ("fruta.gif", [0, 100], [0,0])
-    sprites.add ( sprite3 )
-    sprite4 = MiSprite ("bola.gif", [100, 100], [0,0] )
-    sprites.add ( sprite4 )
+    #sprite3 = MiSprite ("imagenesPacman/fruta.gif", [0, 100], [0,0])
+    #sprites.add ( sprite3 )
+    #sprite4 = MiSprite ("imagenesPacman/bola.gif", [100, 100], [0,0] )
+    #sprites.add(sprite4)
 
     #bucle de redibujado de los screens
     reloj = pygame.time.Clock() 
