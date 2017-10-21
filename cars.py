@@ -17,7 +17,7 @@ BACKGROUNDS = ('naipe_doble.jpg')
 BACKGROUNDS_LIST = (
     'imagenesCars/dinaco.jpg',
     'imagenesCars/fly.jpg',
-    'imagenesCars/franchesco.jpg',
+    #'imagenesCars/franchesco.jpg',
     'imagenesCars/hippy.jpg',
     'imagenesCars/luigi.jpg',
     #'imagenesCars/mate.jpg',
@@ -80,6 +80,10 @@ def main():
                 if event.key == K_2:
                     posx=0; posy=0
                     IMAGES['background'] = pygame.image.load('imagenesCars/Jackson_Storm.jpg').convert()
+                    SCREEN.blit(IMAGES['background'], (0,0))
+                if event.key == K_f:
+                    posx=0; posy=0
+                    IMAGES['background'] = pygame.image.load('imagenesCars/franchesco.jpg').convert()
                     SCREEN.blit(IMAGES['background'], (0,0))
                 if event.key == K_m:
                     posx=0; posy=0
