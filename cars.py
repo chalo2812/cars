@@ -33,10 +33,13 @@ def main():
     pygame.display.set_caption('Cars')
     IMAGES['background'] = pygame.image.load(BACKGROUNDS).convert()
     posx = 0;
+    #pygame.mixer.music.load('tumblr_m9v2ujdS2q1r5dxz2o1.mp3');
     posy = 0;
-    SCREEN.blit(IMAGES['background'], (0,0)) 
+    SCREEN.blit(IMAGES['background'], (0,0));
+    #pygame.mixer.music.play(1, 0);
     while True:
         for event in pygame.event.get():
+
             if event.type == KEYDOWN: 
                 if event.key == K_SPACE:
                     posx=0; posy=0
@@ -152,11 +155,13 @@ def main():
                         posy=posy - 30
                     SCREEN.blit(IMAGES['background'], (posx,posy))  
                 if event.key == K_ESCAPE:
-                    pygame.quit()
-                    sys.exit()
+                    #pygame.mixer.music.stop();
+                    pygame.quit();
+                    sys.exit();
                 if event.type == QUIT:
-                    pygame.quit()
-                    sys.exit()
+                    #pygame.mixer.music.stop();
+                    pygame.quit();
+                    sys.exit();
         pygame.display.flip()
         FPSCLOCK.tick(FPS)
 
