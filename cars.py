@@ -17,22 +17,12 @@ BACKGROUNDS = ('naipe_doble.jpg')
 BACKGROUNDS_LIST = (
     'imagenesCars/dinaco.jpg',
     'imagenesCars/fly.jpg',
-    #'imagenesCars/franchesco.jpg',
     'imagenesCars/hippy.jpg',
     'imagenesCars/luigi.jpg',
-    #'imagenesCars/mate.jpg',
     'imagenesCars/ramon.jpg',
-    #'imagenesCars/rayo.jpg',
-    #'imagenesCars/red.jpg',
-    #'imagenesCars/sally.jpg',
     'imagenesCars/sargento.jpg',
-    #'imagenesCars/apb.jpg',    
     'imagenesCars/Doc.jpg',
-    #'imagenesCars/Chick.jpg',
     'imagenesCars/sheriff.jpg',
-    #'imagenesCars/cruz lodo.jpg'
-    #'imagenesCars/cruz.jpg',
-    #'imagenesCars/Jackson_Storm.jpg'
 )
 
 def main():
@@ -101,6 +91,10 @@ def main():
                     posx=0; posy=0
                     IMAGES['background'] = pygame.image.load('imagenesCars/cruz lodo.jpg').convert()
                     SCREEN.blit(IMAGES['background'], (0,0))
+                if event.key == K_3:
+                    posx=0; posy=0
+                    IMAGES['background'] = pygame.image.load('imagenesCars/dj.jpg').convert()
+                    SCREEN.blit(IMAGES['background'], (0,0))
                 if event.key == K_5:
                     posx=0; posy=0
                     IMAGES['background'] = pygame.image.load('imagenesCars/cruz 95.jpg').convert()
@@ -136,6 +130,10 @@ def main():
                 if event.key == K_7:
                     posx=0; posy=0
                     IMAGES['background'] = pygame.image.load('imagenesCars/Doc.jpg').convert()
+                    SCREEN.blit(IMAGES['background'], (0,0))
+                if event.key == K_9:
+                    posx=0; posy=0
+                    IMAGES['background'] = pygame.image.load('imagenesCars/Snot_rod_side.jpg').convert()
                     SCREEN.blit(IMAGES['background'], (0,0))
                 if event.key == K_RIGHT:
 					if posx < 846:
