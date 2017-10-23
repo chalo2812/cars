@@ -60,6 +60,10 @@ def main():
                     SCREEN.blit(IMAGES['background'], (0,0))
                 if event.key == K_w:
                     posx=0; posy=0
+                    IMAGES['background'] = pygame.image.load('imagenesCars/Wingo.png').convert()
+                    SCREEN.blit(IMAGES['background'], (0,0))
+                if event.key == K_o:
+                    posx=0; posy=0
                     IMAGES['background'] = pygame.image.load('imagenesCars/Miss_Fritter.jpg').convert()
                     SCREEN.blit(IMAGES['background'], (0,0))
                 if event.key == K_s:
@@ -139,9 +143,9 @@ def main():
                     IMAGES['background'] = pygame.image.load('imagenesCars/Snot_rod_side.jpg').convert()
                     SCREEN.blit(IMAGES['background'], (0,0))
                 if event.key == K_RIGHT:
-					if posx < 846:
-						posx = posx + 20
-					SCREEN.blit(IMAGES['background'], (posx,posy))
+                    if posx < 846:
+                        posx = posx + 20
+                    SCREEN.blit(IMAGES['background'], (posx,posy))
                 if event.key == K_LEFT:
                     if posx > 0:
                         posx = posx - 20
