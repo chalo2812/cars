@@ -6,14 +6,14 @@ import pygame
 from pygame.locals import *
 
 FPS = 30
-SCREENWIDTH  = 846#282 * 3
-SCREENHEIGHT = 358#179 * 2 
+SCREENWIDTH  = 553
+SCREENHEIGHT = 531
 # amount by which base can maximum shift to left
 PIPEGAPSIZE  = 100 # gap between upper and lower part of pipe
 #BASEY        = SCREENHEIGHT * 0.79
 # image, sound and hitmask  dicts
 IMAGES, SOUNDS, HITMASKS = {}, {}, {}
-BACKGROUNDS = ('naipe_doble.jpg')
+BACKGROUNDS = ('fondo-pacman.jpg')
 BACKGROUNDS_LIST = (
 
 )
