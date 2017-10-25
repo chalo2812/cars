@@ -102,9 +102,17 @@ def main():
                     posx=0; posy=0
                     IMAGES['background'] = pygame.image.load('imagenesCars/dj.jpg').convert()
                     SCREEN.blit(IMAGES['background'], (0,0))
+                if event.key == K_4:
+                    posx=0; posy=0
+                    IMAGES['background'] = pygame.image.load('imagenesCars/ambulancia.jpg').convert()
+                    SCREEN.blit(IMAGES['background'], (0,0))
                 if event.key == K_5:
                     posx=0; posy=0
                     IMAGES['background'] = pygame.image.load('imagenesCars/cruz 95.jpg').convert()
+                    SCREEN.blit(IMAGES['background'],(0,0))
+                if event.key == K_e:
+                    posx=0; posy=0
+                    IMAGES['background'] = pygame.image.load('imagenesCars/boost.jpg').convert()
                     SCREEN.blit(IMAGES['background'],(0,0))
                 if event.key == K_a:
                     posx=0; posy=0
