@@ -51,24 +51,40 @@ def main():
     #pygame.mixer.music.play(1, 0);
     sprites = pygame.sprite.RenderUpdates();
     #sprite1 = MiSprite("imagenesPacman/pacman.png", [220,390], [50,0]);
-    sprite1 = MiSprite("imagenesPacman/pacman.png", [220,390], [2,0]);
+    sprite1 = MiSprite("imagenesPacman/pacman.png", [220,390], [0,0]);
     sprites.add ( sprite1 );
-    sprite2 = MiSprite("imagenesPacman/fantasma.gif",[100,0], [0, 50] )
+    sprite2 = MiSprite("imagenesPacman/fantasma.gif",[300,290], [0, 0]);
     sprites.add ( sprite2 );
     while True:
         screen = pygame.display.get_surface (); 
-        sprites.update()
-        sprites.clear (screen, SCREEN) 
-        pygame.display.update (sprites.draw (screen))
+        sprites.update();
+        sprites.clear(screen,SCREEN); 
+        pygame.display.update(sprites.draw(screen));
         for event in pygame.event.get():
             if event.type == KEYDOWN: 
+			    if event.key == K_RIGHT:
+                    if posx < 846:
+                        posx = posx + 20
+                    SCREEN.blit(sprite1, (posx,posy))
+                if event.key == K_LEFT:
+                    if posx > 0:
+                        posx = posx - 20
+                    SCREEN.blit(IMAGES['background'], (posx,posy))
+                if event.key == K_DOWN:
+                    if posy < 358:
+                        posy = posy + 30
+                    SCREEN.blit(IMAGES['background'], (posx,posy))
+                if event.key == K_UP:
+                    if posy > 0:
+                        posy=posy - 30
+                    SCREEN.blit(IMAGES['background'], (posx,posy))
                 if event.key == K_ESCAPE:
                     pygame.quit();
                     sys.exit();
                 if event.type == QUIT:
                     pygame.quit();
                     sys.exit();
-        pygame.display.flip()
+			pygame.display.flip()
         FPSCLOCK.tick(FPS)
 	pygame.display.flip()
 

@@ -166,6 +166,10 @@ def main():
                     posx=0; posy=0
                     IMAGES['background'] = pygame.image.load('imagenesPacman/inky.png').convert()
                     SCREEN.blit(IMAGES['background'], (0,0))
+                if event.key == K_u:
+                    posx=0; posy=0
+                    IMAGES['background'] = pygame.image.load('imagenesPacman/pacman izq.jpg').convert()
+                    SCREEN.blit(IMAGES['background'], (0,0))
                 if event.key == K_RIGHT:
                     if posx < 846:
                         posx = posx + 20

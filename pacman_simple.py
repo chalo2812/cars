@@ -61,6 +61,7 @@ if __name__ == "__main__":
         pygame.display.update (sprites.draw (screen))
         for event in pygame.event.get() :
             if event.type == pygame.KEYDOWN :
+			
                 if event.key == pygame.K_ESCAPE :
                     pygame.quit()
                     sys.exit()
