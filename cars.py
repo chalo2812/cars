@@ -84,13 +84,26 @@ def main():
                     posx=0; posy=0
                     IMAGES['background'] = pygame.image.load('imagenesCars/franchesco.jpg').convert()
                     SCREEN.blit(IMAGES['background'], (0,0))
-                if event.key == K_m:
+                if event.key == K_t:
                     posx=0; posy=0
                     IMAGES['background'] = pygame.image.load('imagenesCars/mate.jpg').convert()
+                    SCREEN.blit(IMAGES['background'], (0,0))
+                if event.key == K_m:
+                    posx=0; posy=0
+                    #IMAGES['background'] = pygame.image.load('imagenesCars/mate.jpg').convert()
+                    IMAGES['background'] = pygame.image.load('imagenesMario/mario.jpg').convert()
                     SCREEN.blit(IMAGES['background'], (0,0))
                 if event.key == K_c:
                     posx=0; posy=0
                     IMAGES['background'] = pygame.image.load('imagenesCars/cruz.jpg').convert()
+                    SCREEN.blit(IMAGES['background'], (0,0))
+                if event.key == K_b:
+                    posx=0; posy=0
+                    IMAGES['background'] = pygame.image.load('imagenesMario/interrogacion.jpg').convert()
+                    SCREEN.blit(IMAGES['background'], (0,0))
+                if event.key == K_y:
+                    posx=0; posy=0
+                    IMAGES['background'] = pygame.image.load('imagenesMario/shroom.jpg').convert()
                     SCREEN.blit(IMAGES['background'], (0,0))
                 if event.key == K_z:
                     posx=0; posy=0
@@ -99,10 +112,10 @@ def main():
                 if event.key == K_x:
                     posx=0; posy=0
                     IMAGES['background'] = pygame.image.load('imagenesPacman/bola.jpg').convert()
-                    SCREEN.blit(IMAGES['background'], (0,0))
+                    SCREEN.blit(IMAGES['background'], (0,0))                
                 if event.key == K_0:
                     posx=0; posy=0
-                    #IMAGES['background'] = pygame.image.load('imagenesCars/cruz lodo.jpg').convert()
+                  	#IMAGES['background'] = pygame.image.load('imagenesCars/cruz lodo.jpg').convert()
                     IMAGES['background'] = pygame.image.load('imagenesPacman/pink.png').convert()
                     SCREEN.blit(IMAGES['background'], (0,0))
                 if event.key == K_3:
@@ -165,6 +178,10 @@ def main():
                 if event.key == K_p:
                     posx=0; posy=0
                     IMAGES['background'] = pygame.image.load('imagenesPacman/inky.png').convert()
+                    SCREEN.blit(IMAGES['background'], (0,0))
+                if event.key == K_i:
+                    posx=0; posy=0
+                    IMAGES['background'] = pygame.image.load('imagenesPacman/fantas.png').convert()
                     SCREEN.blit(IMAGES['background'], (0,0))
                 if event.key == K_u:
                     posx=0; posy=0
