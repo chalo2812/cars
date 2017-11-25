@@ -97,9 +97,17 @@ def main():
                     posx=0; posy=0
                     IMAGES['background'] = pygame.image.load('imagenesCars/cruz.jpg').convert()
                     SCREEN.blit(IMAGES['background'], (0,0))
+                if event.key == K_j:
+                    posx=0; posy=0
+                    IMAGES['background'] = pygame.image.load('imagenesMario/Wario.png').convert()
+                    SCREEN.blit(IMAGES['background'], (0,0))
+                if event.key == K_n:
+                    posx=0; posy=0
+                    IMAGES['background'] = pygame.image.load('imagenesMario/Yoshi.png').convert()
+                    SCREEN.blit(IMAGES['background'], (0,0))
                 if event.key == K_b:
                     posx=0; posy=0
-                    IMAGES['background'] = pygame.image.load('imagenesMario/interrogacion.jpg').convert()
+                    IMAGES['background'] = pygame.image.load('imagenesMario/interrogacionjj.jpg').convert()
                     SCREEN.blit(IMAGES['background'], (0,0))
                 if event.key == K_y:
                     posx=0; posy=0
