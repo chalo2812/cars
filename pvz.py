@@ -15,14 +15,20 @@ PIPEGAPSIZE  = 100 # gap between upper and lower part of pipe
 IMAGES, SOUNDS, HITMASKS = {}, {}, {}
 BACKGROUNDS = ('naipe_doble.jpg')
 BACKGROUNDS_LIST = (
-    'imagenesPvZ/dinaco.jpg',
-    'imagenesPvZ/fly.jpg',
-    'imagenesPvZ/hippy.jpg',
-    'imagenesPvZ/luigi.jpg',
-    'imagenesPvZ/ramon.jpg',
-    'imagenesPvZ/sargento.jpg',
-    'imagenesPvZ/Doc.jpg',
-    'imagenesPvZ/sheriff.jpg',
+    'imagenesPvZ/Balde.png',
+    'imagenesPvZ/Bandera.png',
+    'imagenesPvZ/Bomba.png',
+    'imagenesPvZ/Cono.png',
+    'imagenesPvZ/Diario.png',
+    'imagenesPvZ/Grandulon.png',
+    'imagenesPvZ/HongoNocturno.png',
+    'imagenesPvZ/Jugador.png',
+    'imagenesPvZ/NocheGrande.png',
+    'imagenesPvZ/Nuez.png',
+    'imagenesPvZ/Peashooter.png',
+    'imagenesPvZ/Repetidor.png',
+    'imagenesPvZ/Repollo.png',
+    'imagenesPvZ/Sunflower.png',
 )
 
 def main():
@@ -50,9 +56,9 @@ def main():
                     posx=0; posy=0
                     IMAGES['background'] = pygame.image.load(BACKGROUNDS).convert()
                     SCREEN.blit(IMAGES['background'], (posx,posy)) 
-                if event.key == K_r:
+                if event.key == K_b:
                     posx=0; posy=0
-                    IMAGES['background'] = pygame.image.load('imagenesCars/rayo.jpg').convert()                
+                    IMAGES['background'] = pygame.image.load('imagenesPvZ/Balde.png').convert()                
                     SCREEN.blit(IMAGES['background'], (0,0))
                 if event.key == K_RIGHT:
                     if posx < 846:
